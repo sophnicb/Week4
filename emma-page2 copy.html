@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adding Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <title>CFGG</title>
+    <!-- Linking CSS file -->
+    <link rel="stylesheet" href="index1gp copy.css">
+    <!--Adding Font For the Home Page -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>  
+        <!--navbar group-->  
+        <nav class="navbar custom-bg-color navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <!--Logo on nav bar-->
+                <a class="navbar-brand" href="CFGG.html"><img src="Pics/CFGG Logo.png" alt="CFGG" height="120px" width="210px"> </a>
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="pics/CFGG Logo.png" alt="Logo"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="hover navbar-nav justify-content-center flex-grow-1 pe-5">
+                            <li class="nav-item">
+                                <a class="nav-link active custom-link-color home-link" aria-current="page" href="Alex.html">Home</a>
+                                <!-- Add links to nav buttons -->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Mobile.html">Mobile</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Switch.html">Switch</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Playstaion.html">PlayStation</a>
+                            </li>
+                        </ul>
+                        <!--Adding account button here-->
+                        <div class="account-container">
+                        <button id="account"><img src="Pics/Account.png" alt="account" width="45px" height="45px"></button>
+                        <div class="popup"> <!--Adding pop up box here-->
+                            <div class="close-btn">&times;</div> <!--cross in top right corner to close pop up-->
+                            <div class="form"> <!--Log in & elements on pop up box-->
+                                <h2>Log In</h2>
+                                <div class="form-element">
+                                    <label for="email">Email</label><!--email input bar-->
+                                    <input type="Text" id="email" placeholder="Enter email">
+                                </div>
+                                 <div class="form-element"> <!--password input bar-->
+                                    <label for="password">Password</label>
+                                    <input type="password" id="password" placeholder="Enter password">
+                                </div>
+                                <div class="form-element">
+                                    <button> Log In </button> <!--Button to log in-->
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                         <!-- Adding the Search Bar here -->
+                        <!-- This form is initially hidden on small and medium screens (lg and below) -->
+                        <form class="d-flex mt-3 d-lg-none" role="search"> <!-- Moving the search form here -->
+                            <!-- Input field for the search term -->
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <!-- Button to submit the search form -->
+                            <button class="btn btn-outline-success" type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+                <form class="d-flex mt-3 d-none d-lg-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+    </header>
+<body>
+
+<!--Adding the containers here for header image & chart-->
+
+    <div class="col1 col-md-7 mx-auto">
+        <img src="pics/Mobile2.png" alt="Mobile Gaming">
+            </div>
+
+ <br><br>
+
+<!-- Adding containers here for articles -->
+<div class="media1 media-flip no-margin mx-auto">
+
+    <div class="img">
+        <img src="CFGG Logo.png" alt="Balloons" width:="100px" height="100px">
+    </div>
+    
+    <div class="content custom-text-light">
+        <span><h4>Heading</h4></span>
+        <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis condimentum.</p>
+    </div>
+    <div class="footer">
+        An optional footer goes here.
+    </div>
+    </div>
+
+
+<div class="media media-flip no-margin mx-auto">
+
+        <div class="img">
+            <img src="CFGG Logo.png" alt="Balloons" width:="100px" height="100px">
+        </div>
+        
+        <div class="content custom-text-dark">
+            <h4>Heading</h4>
+            <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis condimentum.</p>
+        </div>
+        <div class="footer">
+            An optional footer goes here.
+        </div>
+        </div>
+
+
+<div class="media1 media-flip no-margin mx-auto">
+
+            <div class="img">
+                <img src="CFGG Logo.png" alt="Balloons" width:="100px" height="100px">
+            </div>
+            
+            <div class="content custom-text-light">
+                <h4>Heading</h4>
+                <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis condimentum.</p>
+            </div>
+            <div class="footer">
+                An optional footer goes here.
+            </div>
+            </div>
+        
+        
+<div class="media media-flip no-margin mx-auto">
+        
+                <div class="img">
+                    <img src="CFGG Logo.png" alt="Balloons" width:="100px" height="100px">
+                </div>
+                
+                <div class="content custom-text-dark">
+                    <h4>Heading</h4>
+                    <p id="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula vitae ligula sit amet maximus. Nunc auctor neque ipsum, ac porttitor elit lobortis ac. Vivamus ultrices sodales tellus et aliquam. Pellentesque porta sit amet nulla vitae luctus. Praesent quis risus id dolor venenatis condimentum.</p>
+                </div>
+                <div class="footer">
+                    An optional footer goes here.
+                </div>
+                </div>
+
+
+
+
+
+
+    <!-- Footer Section -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+    <div class="footerlogo"> <!--footer logo-->
+      <img src="pics/CFGG Logo.png" alt="CFGG" width="180px"></a>
+        <div class="footercontents">
+          <ul> <!--add links-->
+            <li class="footer-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="footer-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+            <li class="footer-item">
+              <a href="#">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+    </div>
+        <div class="social-wrapper"> <!--social media icons-->
+          <ul>
+            <li>
+              <a href="https://twitter.com/" target="_blank">
+                <img src="pics/twitter.png" alt="Twitter Logo" class="twitter-icon"></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="pics/insta.png" alt="Instagram Logo" class="instagram-icon"></a>
+            </li>
+            <li>
+              <a href="https://discord.com/" target="_blank">
+                <img src="pics/discord.png" alt="Discord Logo" class="discord-icon"></a>
+            </li>
+            <li>
+              <a href="https://facebook.com/" target="_blank">
+                <img src="pics/facebook.png" alt="Facebook Logo" class="facebook-icon"></a>
+            </li>
+            <li>
+              <a href="https://twitch.com/" target="_blank">
+                <img src="pics/twitch.png" alt="twitch Logo" class="twitch-icon"></a>
+            </li>
+            <li>
+              <a href="https://youtube.com/" target="_blank">
+                <img src="pics/youtube.png" alt="Youtube Logo" class="youtube-icon"></a>
+            </li>
+          </ul>
+        </div>
+          <nav class="footer-nav" role="navigation"><!--text with company/copyright-->
+          <p>CFGG &copy; All rights reserved.</p>
+        </nav>
+      </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+ <!--Linking JavaScript file here-->
+ <script src = "Alex.js"></script>
+</body>
+</html>
