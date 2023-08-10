@@ -19,7 +19,7 @@
     <!-- Page title -->
     <title>CFGG</title>
 
-    <!-- Font For the Home Page -->
+    <!-- Font For the Page -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!--Link for Importing Icons -->
@@ -31,49 +31,74 @@
 <body>
 
    <!-- Header section -->
-   <header>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+   <header>  
+    <!--navbar group-->  
+    <nav class="navbar custom-bg-color navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <!-- Logo/Branding -->
-            <a class="navbar-brand" href="CFGGindex.html">
-                <img src="Pics/CFGG Logo.png" alt="CFGG" height="100px" width="180px">
-            </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <!--Logo on nav bar-->
+            <a class="navbar-brand" href="CFGG.html"><img src="Pics/CFGG Logo.png" alt="CFGG" height="120px" width="210px"> </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img src="Pics/CFGG Logo2.png" alt="CFGG" height="80px" width="100px"></h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="pics/CFGG Logo.png" alt="Logo"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-4">
+                    <ul class="hover navbar-nav justify-content-center flex-grow-1 pe-5">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link custom-link-color home-link" aria-current="page" href="Index.html" target="_blank">Home</a>
+                            <!-- Add links to nav buttons -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Mobile.html"> Mobile </a>
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Mobile.html" target="_blank">Mobile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Nintendo Switch</a>
+                            <a class="nav-link active custom-link-color nav-item-link" aria-current="page" href="Switch.html" target="_blank">Switch</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PlayStation.html">PlayStation</a>
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="PlayStation.html" target="_blank">PlayStation</a>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
-                    <div class="header-icons ml-auto">
-                        <a href="#" class="header-icon"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="header-icon"><i class="fas fa-user"></i></a>
+                    <!--Adding account button here-->
+                    <div class="account-container">
+                    <button id="account"><img src="Pics/Account.png" alt="account" width="45px" height="45px"></button>
+                    <div class="popup"> <!--Adding pop up box here-->
+                        <div class="close-btn">&times;</div> <!--cross in top right corner to close pop up-->
+                        <div class="form"> <!--Log in & elements on pop up box-->
+                            <h2>Log In</h2>
+                            <div class="form-element">
+                                <label for="email">Email</label><!--email input bar-->
+                                <input type="Text" id="email" placeholder="Enter email">
+                            </div>
+                             <div class="form-element"> <!--password input bar-->
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-element">
+                                <button> Log In </button> <!--Button to log in-->
+                            </div>
+                        </div>
+                        </div>
                     </div>
+                     <!-- Adding the Search Bar here -->
+                    <!-- This form is initially hidden on small and medium screens (lg and below) -->
+                    <form class="d-flex mt-3 d-lg-none" role="search"> <!-- Moving the search form here -->
+                        <!-- Input field for the search term -->
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <!-- Button to submit the search form -->
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
+            <form class="d-flex mt-3 d-none d-lg-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </nav>
-   </header>
+</header>
    
    <!-- Hero section -->
    <div class="hero">

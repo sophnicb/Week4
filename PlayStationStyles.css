@@ -2,111 +2,166 @@
 
 /* CSS STYLE FOR HEADER */
 
-
-/* Applying Open Sans font to body and all its children */
+/* Applyimg Open Sans font to body and all its children */
 body, p, h1, h2, h3, h4, h5, h6, a {
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Applying Open Sans font to elements with a class of "custom-text" */
+.custom-text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Applying Open Sans font to the navigation links */
+.nav-link {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Setting the font size for the entire navbar */
+.navbar {
+  font-size: 20px;
   }
-  
-  /* Applying Open Sans font to elements with a class of "custom-text" */
-  .custom-text {
-    font-family: 'Open Sans', sans-serif;
+
+/* Center-align the navigation items and add left padding */
+.navbar-nav {
+  text-align: center;
+  padding-left: 100px; /* Centered nav bar elements */
+  padding-top: 15px; /*Centered nav bar elements */
+  color: #ffffff; /* Text color for the navigation items */
+  line-height: inherit;
+}
+
+/* Change the color of all navigation links */
+.navbar a {
+  color: #ffffff; /* Text color for navigation links */
+}
+
+/* Apply color change on hover for navigation links */
+.navbar a:hover {
+  color: #0BC9CD; /* Text color on hover */
+}
+
+/* Customize styles for the active home link */
+.navbar .home-link,
+.navbar .home-link.active {
+  color: #ffffff; /* Color for the Home link */
+  font-weight: bold; /* Font weight for the Home link */
+  outline: none; /* Remove the outline */
+}
+
+/* Adding styles for the active navigation link */
+.navbar .nav-item-link.active {
+  color: #14FFF7; /* Change the color to the desired color */
+  font-weight: bold; /* Add font weight if desired */
+}
+
+/*Search Button Styles*/
+.btn-outline-success {
+  background-color: #FF6A92;
+  color:#0E0F1A;
+  border: #0BC9CD;
+}
+/*Small device Navbar toggler style*/
+button.navbar-toggler {
+  background-color: #FF6A92;
+}
+
+/*Small device navbar list styling*/
+#offcanvasNavbar {
+  background-color: #1d8a99;
+  color: #FF6A92;
+}
+/*Small device navbar link list*/
+.offcanvas-body {margin-right: 25px;  /*centered to navbar*/
+}
+/*Small device Navbar logo style*/
+#offcanvasNavbarLabel img {
+  height: 100px;
+  display: flex;
+}
+/* styles for account button*/
+#account {
+  background: none; /*removed of background*/
+  margin-top: 14px; /*center to nav bar*/
+  border: none; /*remove border*/
   }
-  
-  /* Applying Open Sans font to the navigation links */
-  .nav-link {
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Setting the font size for the entire navbar */
-  .navbar {
-    font-size: 20px;
-    background-color: #0E0F1A;
-  }
-  
-  /* Center-align the navigation items and add left padding */
-  .navbar-nav {
-    text-align: center;
-    padding-left: 100px; /* Centered nav bar elements */
-    color: #ffffff; /* Text color for the navigation items */
-  }
-  
-  /* Change the color of all navigation links */
-  .navbar a {
-    color: #ffffff; /* Text color for navigation links */
-  }
-  
-  /* Apply color change on hover for navigation links */
-  .navbar a:hover {
-    color: #0BC9CD; /* Text color on hover */
-  }
-  
-  /* Customize styles for the active home link */
-  .navbar .home-link,
-  .navbar .home-link.active {
-    color: #ffffff; /* Color for the Home link */
-    font-weight: bold; /* Font weight for the Home link */
-    outline: none; /* Remove the outline */
-  }
-  
-  
-  /* Adding styles for the active navigation link */
-  .navbar .nav-item-link.active {
-    color: #14FFF7; /* Change the color to the desired color */
-    font-weight: bold; /* Add font weight if desired */
-  }
-  
-  /* Add vertical bar and space between navigation links */
-  .navbar-nav .nav-item {
-    margin-right: 15px; /* Adjust the margin value to control spacing */
-    position: relative;
-  }
-  
-  .navbar-nav .nav-item::after {
-    content: "|"; /* Add the vertical bar as content */
-    position: absolute;
-    top: 50%;
-    right: -10.5px; /* Adjust the position to control spacing around the bar */
-    transform: translateY(-50%);
-    color: #14FFF7; /* Color of the bar */
-  }
-  
-  .navbar-nav .nav-item:last-child::after {
-    content: none; /* Remove the bar from the last item */
-  }
-  
-  /* Slimmer Search Bar */
-  .form-control {
-    margin-top: -8px;
-    padding: 0.25rem 0.5rem; /* Adjust padding to make the search bar slimmer */
-    height: 2rem; /* Adjust height to match the padding and achieve desired height */
-    background-color: #D7D7D7;
-  }
-  
-  /* Slimmer Search Button */
-  .btn-success {
-    margin-top: -8px;
-    margin-left: -30px;
-    padding: 0.25rem 0.5rem; /* Adjust padding to make the button slimmer */
-    height: 2rem; /* Adjust height to match the padding and achieve desired height */
-    font-size: 14px; /* Adjust font size to match the slimmer button */
-    background-color: #FF6A92;
-  }
-  
-  .header-icons {
-    margin-left: 40px; /* Adjust spacing between icons and search bar */
-  }
-  
-  /* Glowing effect on hover for Cart and User Account icons */
-  .header-icons {
-    margin-right: 20px;
-    font-size: 30px;
-    color: #14FFF7; /* Set the icon color */
-  }
-  
-  .header-icon:hover {
-    color: #FF6A92; /* Set the icon color on hover */
-  }
+
+.popup { /*styles for pop up that appears after pressing account*/
+  background-color: #0BC9CD; 
+  position: fixed; /*so that it centers to page not navbar parent*/
+  top: 50%; /*to help center to page*/
+  bottom:30%; /*to help center to page*/
+  right: 38%; /*to help center to page*/
+  left:50%; /*to help center to page*/
+  opacity: 0; /*so its not visible unless pressed*/
+  transform: translate(-50%,-50%); /*to help center to page*/
+  width: 350px; /*size of pop up box*/
+  height: 300px; /*size of pop up box*/
+  padding:30px; /*size of pop up box*/
+  box-shadow: 3px 2px 2px 3px #0BC9CD; /*outer glow settings*/
+  box-shadow: 0 40px 30px #fff; /*outer glow settings*/
+  box-shadow: 0 0 60px 60px #f0f; /*outer glow settings*/
+  box-shadow: 0 0 20px 30px #0BC9CD;   /*outer glow settings*/
+  border-radius: 10px;
+  justify-content: center; 
+  box-shadow: /*inner glow settings*/
+    inset 0 0 40px #14FFF7,      /*inner glow settings*/
+    inset 20px 0 80px #FF6A92,   /*inner glow settings*/
+    inset -20px 0 80px #0BC9CD,  /*inner glow settings*/
+    inset 20px 0 200px #FF6A92,  /*inner glow settings*/
+    inset -20px 0 200px #0BC9CD, /*inner glow settings*/
+    0 0 40px #14fff7,            /*inner glow settings*/
+    -10px 0 80px #FF6A92,        /*inner glow settings*/
+    10px 0 80px #0BC9CD;  /*inner glow settings*/
+}
+.popup.active { /*once pop up is clicked adjusts opacity*/
+  top:50%;
+  opacity: 1;
+  transform: translate(-50%,-50%)
+}
+.popup .close-btn { /*close x button in top right corner*/
+  position:absolute;
+  top:15px;
+  Right:15px;
+  height: 20px;
+  width: 20px;
+  color: #FF6A92;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.form h2 { /* Log in title on pop up*/
+  text-align: center;
+  color: #0E0F1A;
+}
+.popup .form .form-element { /*div for email & password boxes*/
+  margin: 15px 0px;
+}
+.popup .form .form-element label { /*title for email & password boxes*/
+  font-size: 14px;
+  color: #222;}
+.popup .form .form-element input { /*email & password boxes*/
+   display: block;
+   border-radius: 5px;
+    background-color:#FF6A92;
+    color: #0E0F1A;}
+.popup .form .form-element button { /*log in button on pop up*/
+  border-radius: 5px;
+  background-color: #FF6A92;
+}
+
+/* CSS STYLES FOR THE BODY */
+/* Custom CSS to colour to the body of the website */
+body {
+  background-color: #0E0F1A; /* Can change the colour for background here */
+  padding-top: 140px; /*Added so navbar doesn't cover carousel*/
+}
+
+/* Custom CSS to override the bg-body-tertiary class */
+.custom-bg-color {
+  background-color: #0E0F1A;
+}
 
 /* CSS Style for Hero section*/
 
