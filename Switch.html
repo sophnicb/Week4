@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="SwitchStyles.css">
     
     <!-- Page title -->
-    <title>CFGG</title>
+    <title>CFGG Switch</title>
 
     <!-- Font For the Home Page -->
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -31,49 +31,74 @@
 <body>
 
    <!-- Header section -->
-   <header>
-    <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+   <header>  
+    <!--navbar group-->  
+    <nav class="navbar custom-bg-color navbar-expand-lg fixed-top">
         <div class="container-fluid">
-            <!-- Logo/Branding -->
-            <a class="navbar-brand" href="CFGGindex.html">
-                <img src="Pics/CFGG Logo.png" alt="CFGG" height="100px" width="180px">
-            </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <!--Logo on nav bar-->
+            <a class="navbar-brand" href="CFGG.html"><img src="Pics/CFGG Logo.png" alt="CFGG" height="120px" width="210px"> </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel"><img src="Pics/CFGG Logo.png" alt="CFGG" height="80px" width="120px"></h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="pics/CFGG Logo.png" alt="Logo"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"> </button>
                 </div>
                 <div class="offcanvas-body">
-                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-4">
+                    <ul class="hover navbar-nav justify-content-center flex-grow-1 pe-5">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link custom-link-color home-link" aria-current="page" href="Index.html" target="_blank">Home</a>
+                            <!-- Add links to nav buttons -->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Mobile.html"> Mobile </a>
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Mobile.html" target="_blank">Mobile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Switch.html">Nintendo Switch</a>
+                            <a class="nav-link active custom-link-color nav-item-link" aria-current="page" href="Switch.html" target="_blank">Switch</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="PlayStation.html">PlayStation</a>
+                            <a class="nav-link custom-link-color nav-item-link" aria-current="page" href="Playstaion.html" target="_blank">PlayStation</a>
                         </li>
                     </ul>
-                    <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                    </form>
-                    <div class="header-icons ml-auto">
-                        <a href="#" class="header-icon"><i class="fas fa-shopping-cart"></i></a>
-                        <a href="#" class="header-icon"><i class="fas fa-user"></i></a>
+                    <!--Adding account button here-->
+                    <div class="account-container">
+                    <button id="account"><img src="Pics/Account.png" alt="account" width="45px" height="45px"></button>
+                    <div class="popup"> <!--Adding pop up box here-->
+                        <div class="close-btn">&times;</div> <!--cross in top right corner to close pop up-->
+                        <div class="form"> <!--Log in & elements on pop up box-->
+                            <h2>Log In</h2>
+                            <div class="form-element">
+                                <label for="email">Email</label><!--email input bar-->
+                                <input type="Text" id="email" placeholder="Enter email">
+                            </div>
+                             <div class="form-element"> <!--password input bar-->
+                                <label for="password">Password</label>
+                                <input type="password" id="password" placeholder="Enter password">
+                            </div>
+                            <div class="form-element">
+                                <button> Log In </button> <!--Button to log in-->
+                            </div>
+                        </div>
+                        </div>
                     </div>
+                     <!-- Adding the Search Bar here -->
+                    <!-- This form is initially hidden on small and medium screens (lg and below) -->
+                    <form class="d-flex mt-3 d-lg-none" role="search"> <!-- Moving the search form here -->
+                        <!-- Input field for the search term -->
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <!-- Button to submit the search form -->
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
                 </div>
             </div>
+            <form class="d-flex mt-3 d-none d-lg-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
         </div>
     </nav>
-   </header>
+</header>
    
    <!-- Hero section -->
    <div class="hero">
@@ -81,7 +106,6 @@
             <div class="hero-content text-light">
             <div class="mb-3 fs-lg text-light">
             <i class="fas fa-fire mt-n1 me-1"></i> <!-- This line adds the flame icon -->
-            Hot Topic
             </div><!-- Other content here -->
         </div>
     </div>
@@ -91,43 +115,43 @@
     <section id="latest-news" class="news">
         <div class="news-articles">
             <div class="article-card">
-                <img src="https://images.pushsquare.com/adeff1a220e15/250x183.jpg" alt="Article 1" height="200px">
+                <img src="https://www.gematsu.com/wp-content/uploads/2023/08/Detective-Pikachu-Returns_2023_08-08-23_030.jpg?w=640" alt="Article 1"height="200px">
                 <div class="article-content">
-                    <h3>Smurfs Kart Targets Game of the Year Status on PS5, PS4</h3>
-                    <p>Smurfs Kart is launching on 22nd August for PS5 and PS4, bringing disruption to the ongoing Game of the Year debate. All insincerity aside, the arcade racer from French duo Microids and Eden Games first launched on Nintendo Switch last year, and is now getting a wider release across PlayStation and various other platforms, including ...</p>
-                    <a href="https://www.pushsquare.com/news/2023/05/smurfs-kart-targets-game-of-the-year-status-on-ps5-ps4" class="read-more">Read More</a>
+                    <h3>Detective Pikachu Returns Comes With Exclusive Pokémon Trading Card</h3>
+                    <p>Brewing over on the official Japanese Pokémon website (via Nintendo Wire), early purchases of Detective Pikachu Returns will include an exclusive Pokémon Trading Card, which features the coffee-loving hard-boiled detective riding the back of his partner Growlithe...</p>
+                    <a href="https://www.nintendolife.com/news/2023/08/detective-pikachu-returns-comes-with-exclusive-pokemon-trading-card-in-japan" class="read-more" target="_blank">Read More</a>
                 </div>
             </div>
             <div class="article-card">
-                <img src="https://images.pushsquare.com/3a77496903bc4/250x183.jpg" alt="Article 1" height="200px">
+                <img src="https://videogames.si.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTk2MzQzODkyMjYwNDMxNjM0/fifa-23-nwsl-1.jpg" alt="Article 1" height="200px">
                 <div class="article-content">
-                    <h3>Here's When Mortal Kombat 1's PS5 Pre-Order Beta Starts</h3>
-                    <p>You won’t have to wait long to try out Mortal Kombat 1 – in fact, the game’s pre-order beta is just weeks away. NetherRealm Studios has confirmed that the game’s promotional test will get underway from 18th August through 21st August, and you’ll just need to have a valid PS5 pre-order to participate...</p>
-                    <a href="https://www.pushsquare.com/news/2023/07/heres-when-mortal-kombat-1s-ps5-pre-order-beta-starts" class="read-more">Read More</a>
+                    <h3>New EA Sports FC 24 Deep Dive Welcomes Women's Football To Ultimate Team</h3>
+                    <p>Ultimate Team might have just been one of the most popular modes in the FIFA series, and it looks like EA is keen to carry that on in EA Sports FC 24 as it has today revealed some of the new features that we can expect from the upcoming title's team-builder mode...</p>
+                    <a href="https://www.nintendolife.com/news/2023/08/new-ea-sports-fc-24-deep-dive-welcomes-womens-football-to-ultimate-team" class="read-more" target="_blank">Read More</a>
                 </div>
             </div>
             <div class="article-card">
-                <img src="https://images.pushsquare.com/6a80d1b5fc0bf/250x183.jpg" alt="Article 1" height="200px">
+                <img src="https://cdn-cf.ginx.tv/respawn-cdn/HF_4aeKLcImSy2vV_LXDkXflU3fZ1KOgqMyecCJGvEM/fill/1280/0/no/1/aHR0cHM6Ly93d3cuZ2lueC50di91cGxvYWRzMi9PdmVyd2F0Y2gyL1N1cHBvcnRfNi9PdmVyd2F0Y2hfMl9TdXBwb3J0X0hlcm9fU2Vhc29uXzYuanBlZw.webp" alt="Article 1" height="200px">
                 <div class="article-content">
-                    <h3>Cyberpunk 2077's Phantom Liberty Expansion Is So, So Much More Than PS5 DLC</h3>
-                    <p>Cyberpunk 2077's impending Phantom Liberty expansion (launching on PS5 on 26th September) is much more than simple DLC, instead being an overhaul of virtually every inch of Night City. It goes far beyond the scope of what some might expect and is a true expansion, according to comments made by creative director Pawel Sasko at Summer Game Fest...</p>
-                    <a href="https://www.pushsquare.com/news/2023/06/cyberpunk-2077s-phantom-liberty-expansion-is-so-so-much-more-than-ps5-dlc" class="read-more">Read More</a>
+                    <h3>Overwatch 2 - Official Season 6 Trailer</h3>
+                    <p>Watch the latest trailer for Overwatch 2 to see what's coming in Season 6, including a new support hero Illari, new Invasion story missions, a new PVP mode: Flashpoint, a new game mode called Hero Mastery, new PvP maps like Suravasa and New Junk City, a new Invasion battle pass, and more...</p>
+                    <a href="https://www.ign.com/videos/overwatch-2-official-season-6-trailer" class="read-more" target="_blank">Read More</a>
                 </div>
             </div>
             <div class="article-card">
-                <img src="https://images.pushsquare.com/6749f62cd3605/250x183.jpg" alt="Article 1" height="200px">
+                <img src="https://i0.wp.com/www.vooks.net/img/2023/02/Vooks-zelda-tears-1.jpg?fit=1000%2C562&ssl=1" alt="Article 1" height="200px">
                 <div class="article-content">
-                    <h3>Atlas Fallen (PS5) - The Surge Dev's Best Game Yet</h3>
-                    <p>While it was The Surge that put Deck13 Interactive's name on the map, it's Atlas Fallen that will henceforth be considered the studio's best game to date. Switching the Souls-like structure of its past titles for a more traditional open world adventure with difficulty options, it boasts of excellent traversal and a fun combat system in a sandy setting ruled by an evil god...</p>
-                    <a href="https://www.pushsquare.com/reviews/ps5/atlas-fallen" class="read-more">Read More</a>
+                    <h3>Review: The Legend Of Zelda - Tears Of The Kingdom</h3>
+                    <p>Summary: An epic adventure across the land and skies of Hyrule awaits in The Legend of Zelda™: Tears of the Kingdom for Nintendo Switch™. The adventure is yours to create in a world fueled by your imagination. In this sequel to The Legend of Zelda: Breath of the Wild, you’ll decide your own path…</p>
+                    <a href="https://www.metacritic.com/game/switch/the-legend-of-zelda-tears-of-the-kingdom" class="read-more" target="_blank">Read More</a>
                 </div>
             </div>
             <div class="article-card">
-                <img src="https://images.pushsquare.com/9094c0f29a4ca/250x183.jpg" alt="Article 1" height="200px">
+                <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_Broforce.jpg" alt="Article 1" height="200px">
                 <div class="article-content">
-                    <h3>Lies of P Goes Gold with September PS5, PS4 Launch Looming</h3>
-                    <p>Indie Souls-like Lies of P has gone gold ahead of its planned 19th September 2023 release date, meaning work on the 1.0 version of the game is complete. Confirming the news on Twitter, Round8 Studio said: "It is our genuine pleasure to announce that Lies of P has gone gold. Truly, we cannot wait for your arrival in Krat on September 19."...</p>
-                    <a href="https://www.pushsquare.com/news/2023/08/lies-of-p-goes-gold-with-september-ps5-ps4-launch-looming" class="read-more">Read More</a>
+                    <h3>Broforce - Official Broforce Forever Update Launch Trailer</h3>
+                    <p>Broforce is a 2D side-scrolling action game developed by Free Lives. Broforce is releasing its final update titled Broforce Forever bringing an improved and expanded campaign with new unlocks, six new characters, four new challenge levels, bug fixes, and more.</p>
+                    <a href="https://www.ign.com/videos/broforce-official-broforce-forever-update-launch-trailer" class="read-more" target="_blank">Read More</a>
                 </div>
             </div>
             <!-- Add more article cards here -->
@@ -137,29 +161,29 @@
     <!-- Popular Games -->
     <div class="popular-games">
         <div class="game-card">
-            <img src="Pics/Sale.jpg" alt="Game 1">
-            <h3>Popular Game 1</h3>
-            <a href="buy-game1.html" class="buy-now">Buy Now</a>
+            <img src="https://images.nintendolife.com/8428f241075c0/pikmin-4.large.jpg" alt="Game 1">
+            <h3>Pikmin 4</h3>
+            <a href="https://www.nintendo.com/store/products/pikmin-4-switch/" class="buy-now" target="_blank">Buy Now</a>
         </div>
         <div class="game-card">
-            <img src="Pics/Sale.jpg" alt="Game 2">
-            <h3>Popular Game 2</h3>
-            <a href="buy-game2.html" class="buy-now">Buy Now</a>
+            <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_801/b_white/f_auto/q_auto/ncom/software/switch/70010000000153/de697f487a36d802dd9a5ff0341f717c8486221f2f1219b675af37aca63bc453" alt="Game 2">
+            <h3>Mario Kart 8 Deluxe</h3>
+            <a href="https://www.nintendo.com/store/products/mario-kart-8-deluxe-switch/" class="buy-now" target="_blank">Buy Now</a>
         </div>
         <div class="game-card">
-            <img src="Pics/Sale.jpg" alt="Game 3">
-            <h3>Popular Game 3</h3>
-            <a href="buy-game1.html" class="buy-now">Buy Now</a>
+            <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/413150/capsule_616x353.jpg?t=1666917466" alt="Game 3">
+            <h3>Stardew Valley</h3>
+            <a href="https://www.nintendo.com/store/products/stardew-valley-switch/" class="buy-now" target="_blank">Buy Now</a>
         </div>
         <div class="game-card">
-            <img src="Pics/Sale.jpg" alt="Game 4">
-            <h3>Popular Game 4</h3>
-            <a href="buy-game1.html" class="buy-now">Buy Now</a>
+            <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_801/b_white/f_auto/q_auto/ncom/software/switch/70010000063709/32b85837beea0eee31220a59e247219662de4011f7a8c18fce61cf99a4933eb7" alt="Game 4">
+            <h3>Metroid Prime</h3>
+            <a href="https://www.nintendo.com/store/products/metroid-prime-remastered-switch/" class="buy-now" target="_blank">Buy Now</a>
         </div>
         <div class="game-card">
-            <img src="Pics/Sale.jpg" alt="Game 5">
-            <h3>Popular Game 5</h3>
-            <a href="buy-game1.html" class="buy-now">Buy Now</a>
+            <img src="https://assets.nintendo.com/image/upload/ar_16:9,c_lpad,w_801/b_white/f_auto/q_auto/ncom/software/switch/70010000020406/a2b5a83e47598a93c3e1e89e5f2d627409cc78a9973d98aace023c539c7edf11" alt="Game 5">
+            <h3>Doom 64</h3>
+            <a href="https://www.nintendo.com/store/products/doom-64-switch/" class="buy-now" target="_blank">Buy Now</a>
         </div>
         <!-- Add more game cards here -->
     </div>
@@ -224,6 +248,8 @@
 
 <!--Adding CSS Bootstrap link here -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" 
-integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>                        
+integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script> 
+ <!--Linking JavaScript file here-->
+ <script src = "Alex.js"></script>                       
 </body>
 </html>

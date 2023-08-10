@@ -2,325 +2,383 @@
 
 /* CSS STYLE FOR HEADER */
 
-
-/* Applying Open Sans font to body and all its children */
+/* Applyimg Open Sans font to body and all its children */
 body, p, h1, h2, h3, h4, h5, h6, a {
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Applying Open Sans font to elements with a class of "custom-text" */
-  .custom-text {
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Applying Open Sans font to the navigation links */
-  .nav-link {
-    font-family: 'Open Sans', sans-serif;
-  }
-  
-  /* Setting the font size for the entire navbar */
-  .navbar {
-    font-size: 20px;
-    background-color: #0E0F1A;
-  }
-  
-  /* Center-align the navigation items and add left padding */
-  .navbar-nav {
-    text-align: center;
-    padding-left: 100px; /* Centered nav bar elements */
-    color: #ffffff; /* Text color for the navigation items */
-  }
-  
-  /* Change the color of all navigation links */
-  .navbar a {
-    color: #ffffff; /* Text color for navigation links */
-  }
-  
-  /* Apply color change on hover for navigation links */
-  .navbar a:hover {
-    color: #0BC9CD; /* Text color on hover */
-  }
-  
-  /* Customize styles for the active home link */
-  .navbar .home-link,
-  .navbar .home-link.active {
-    color: #ffffff; /* Color for the Home link */
-    font-weight: bold; /* Font weight for the Home link */
-    outline: none; /* Remove the outline */
-  }
-  
-  
-  /* Adding styles for the active navigation link */
-  .navbar .nav-item-link.active {
-    color: #14FFF7; /* Change the color to the desired color */
-    font-weight: bold; /* Add font weight if desired */
-  }
-  
-  /* Add vertical bar and space between navigation links */
-  .navbar-nav .nav-item {
-    margin-right: 15px; /* Adjust the margin value to control spacing */
-    position: relative;
-  }
-  
-  .navbar-nav .nav-item::after {
-    content: "|"; /* Add the vertical bar as content */
-    position: absolute;
-    top: 50%;
-    right: -10.5px; /* Adjust the position to control spacing around the bar */
-    transform: translateY(-50%);
-    color: #14FFF7; /* Color of the bar */
-  }
-  
-  .navbar-nav .nav-item:last-child::after {
-    content: none; /* Remove the bar from the last item */
-  }
-  
-  /* Slimmer Search Bar */
-  .form-control {
-    margin-top: -8px;
-    padding: 0.25rem 0.5rem; /* Adjust padding to make the search bar slimmer */
-    height: 2rem; /* Adjust height to match the padding and achieve desired height */
-    background-color: #D7D7D7;
-  }
-  
-  /* Slimmer Search Button */
-  .btn-success {
-    margin-top: -8px;
-    margin-left: -30px;
-    padding: 0.25rem 0.5rem; /* Adjust padding to make the button slimmer */
-    height: 2rem; /* Adjust height to match the padding and achieve desired height */
-    font-size: 14px; /* Adjust font size to match the slimmer button */
-    background-color: #FF6A92;
-  }
-  
-  .header-icons {
-    margin-left: 40px; /* Adjust spacing between icons and search bar */
-  }
-  
-  /* Glowing effect on hover for Cart and User Account icons */
-  .header-icons {
-    margin-right: 20px;
-    font-size: 30px;
-    color: #14FFF7; /* Set the icon color */
-  }
-  
-  .header-icon:hover {
-    color: #FF6A92; /* Set the icon color on hover */
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Applying Open Sans font to elements with a class of "custom-text" */
+.custom-text {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Applying Open Sans font to the navigation links */
+.nav-link {
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* Setting the font size for the entire navbar */
+.navbar {
+  font-size: 20px;
   }
 
+/* Center-align the navigation items and add left padding */
+.navbar-nav {
+  text-align: center;
+  padding-left: 100px; /* Centered nav bar elements */
+  padding-top: 15px; /*Centered nav bar elements */
+  color: #ffffff; /* Text color for the navigation items */
+  line-height: inherit;
+}
+
+/* Change the color of all navigation links */
+.navbar a {
+  color: #ffffff; /* Text color for navigation links */
+}
+
+/* Apply color change on hover for navigation links */
+.navbar a:hover {
+  color: #0BC9CD; /* Text color on hover */
+}
+
+/* Customize styles for the active home link */
+.navbar .home-link,
+.navbar .home-link.active {
+  color: #ffffff; /* Color for the Home link */
+  font-weight: bold; /* Font weight for the Home link */
+  outline: none; /* Remove the outline */
+}
+
+/* Adding styles for the active navigation link */
+.navbar .nav-item-link.active {
+  color: #14FFF7; /* Change the color to the desired color */
+  font-weight: bold; /* Add font weight if desired */
+}
+
+/*Search Button Styles*/
+.btn-outline-success {
+  background-color: #FF6A92;
+  color:#0E0F1A;
+  border: #0BC9CD;
+}
+/*Small device Navbar toggler style*/
+button.navbar-toggler {
+  background-color: #FF6A92;
+}
+
+/*Small device navbar list styling*/
+#offcanvasNavbar {
+  background-color: #1d8a99;
+  color: #FF6A92;
+}
+/*Small device navbar link list*/
+.offcanvas-body {margin-right: 25px;  /*centered to navbar*/
+}
+/*Small device Navbar logo style*/
+#offcanvasNavbarLabel img {
+  height: 100px;
+  display: flex;
+}
+/* styles for account button*/
+#account {
+  background: none; /*removed of background*/
+  margin-top: 14px; /*center to nav bar*/
+  border: none; /*remove border*/
+  }
+
+.popup { /*styles for pop up that appears after pressing account*/
+  background-color: #0BC9CD; 
+  position: fixed; /*so that it centers to page not navbar parent*/
+  top: 50%; /*to help center to page*/
+  bottom:30%; /*to help center to page*/
+  right: 38%; /*to help center to page*/
+  left:50%; /*to help center to page*/
+  opacity: 0; /*so its not visible unless pressed*/
+  transform: translate(-50%,-50%); /*to help center to page*/
+  width: 350px; /*size of pop up box*/
+  height: 300px; /*size of pop up box*/
+  padding:30px; /*size of pop up box*/
+  box-shadow: 3px 2px 2px 3px #0BC9CD; /*outer glow settings*/
+  box-shadow: 0 40px 30px #fff; /*outer glow settings*/
+  box-shadow: 0 0 60px 60px #f0f; /*outer glow settings*/
+  box-shadow: 0 0 20px 30px #0BC9CD;   /*outer glow settings*/
+  border-radius: 10px;
+  justify-content: center; 
+  box-shadow: /*inner glow settings*/
+    inset 0 0 40px #14FFF7,      /*inner glow settings*/
+    inset 20px 0 80px #FF6A92,   /*inner glow settings*/
+    inset -20px 0 80px #0BC9CD,  /*inner glow settings*/
+    inset 20px 0 200px #FF6A92,  /*inner glow settings*/
+    inset -20px 0 200px #0BC9CD, /*inner glow settings*/
+    0 0 40px #14fff7,            /*inner glow settings*/
+    -10px 0 80px #FF6A92,        /*inner glow settings*/
+    10px 0 80px #0BC9CD;  /*inner glow settings*/
+}
+.popup.active { /*once pop up is clicked adjusts opacity*/
+  top:50%;
+  opacity: 1;
+  transform: translate(-50%,-50%)
+}
+.popup .close-btn { /*close x button in top right corner*/
+  position:absolute;
+  top:15px;
+  Right:15px;
+  height: 20px;
+  width: 20px;
+  color: #FF6A92;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.form h2 { /* Log in title on pop up*/
+  text-align: center;
+  color: #0E0F1A;
+}
+.popup .form .form-element { /*div for email & password boxes*/
+  margin: 15px 0px;
+}
+.popup .form .form-element label { /*title for email & password boxes*/
+  font-size: 14px;
+  color: #222;}
+.popup .form .form-element input { /*email & password boxes*/
+   display: block;
+   border-radius: 5px;
+    background-color:#FF6A92;
+    color: #0E0F1A;}
+.popup .form .form-element button { /*log in button on pop up*/
+  border-radius: 5px;
+  background-color: #FF6A92;
+}
+
+/* CSS STYLES FOR THE BODY */
+/* Custom CSS to colour to the body of the website */
+body {
+  background-color: #0E0F1A; /* Can change the colour for background here */
+  padding-top: 140px; /*Added so navbar doesn't cover carousel*/
+}
+
+/* Custom CSS to override the bg-body-tertiary class */
+.custom-bg-color {
+  background-color: #0E0F1A;
+}
 /* CSS Style for Hero section*/
 
 /* Hero section styles */
 .hero {
-    position: relative;
-    height: 600px;
-    background-image: url('Pics/PlayStation2.png');
-    background-size: cover;
-    background-position: center;
+  position: relative;
+  height: 600px;
+  background-image: url('Pics/Switch2.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero .fas .fa-fire .mt-n1 .me-1 i {
+  width: autopx;
 }
 
 /* Latest News Articles Styles */
 .news {
-    background-color: #0E0F1A; /* Background color */
-    color: #FFFFFF; /* Text color */
-    padding: 60px 0;
+  background-color: #0E0F1A; /* Background color */
+  color: #FFFFFF; /* Text color */
+  padding: 60px 0;
 }
 
 .news-articles {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 .article-card {
-    display: flex;
-    width: 100%;
-    background-color: #1D8A99; /* Article card background color */
-    color: #ffffff; /* Article text color */
-    text-shadow: #BCB8B8;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
-    align-items: flex-start;
+  display: flex;
+  width: 100%;
+  background-color: #1D8A99; /* Article card background color */
+  color: #ffffff; /* Article text color */
+  text-shadow: #BCB8B8;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  align-items: flex-start;
 }
 
 .article-card img {
-    width: 200px;
-    height: 180px;
-    border-radius: 4px;
-    margin-right: 20px;
+  width: 200px !important;
+  height: 180px !important;
+  border-radius: 4px;
+  margin-right: 20px;
+  object-fit:cover;
 }
 
 .article-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-    background-color: #14FFF7; /* Background color */
-    color: #333; /* Text color */
-    padding: 5px 10px; /* Add padding to create a highlight effect */
-    border-radius: 4px; /* Add rounded corners to the background */
-    font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  background-color: #14FFF7; /* Background color */
+  color: #333; /* Text color */
+  padding: 5px 10px; /* Add padding to create a highlight effect */
+  border-radius: 4px; /* Add rounded corners to the background */
+  font-weight: bold;
 }
 
 .article-card p {
-    color: #ffffff; /* Paragraph text color */
-    margin-bottom: 10px;
-    margin-top: 20px;
+  color: #ffffff; /* Paragraph text color */
+  margin-bottom: 10px;
+  margin-top: 20px;
 }
 
 .article-card .read-more {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #FF6A92; /* Button background color */
-    color: #FFFFFF; /* Button text color */
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    margin-top: 25px;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #FF6A92; /* Button background color */
+  color: #FFFFFF; /* Button text color */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  margin-top: 25px;
 }
 
 .article-card .read-more:hover {
-    background-color: #FF3E6E; /* Button background color on hover */
+  background-color: #FF3E6E; /* Button background color on hover */
 }
 
 /* Popular Games Styles */
 .popular-games {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 
 .game-card {
-    width: calc(20% - 20px); /* Adjust the width and margin as needed */
-    background-color: #14FFF7; /* Game card background color */
-    color: #333333; /* Game text color */
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin-bottom: 20px;
+  width: calc(20% - 20px); /* Adjust the width and margin as needed */
+  background-color: #14FFF7; /* Game card background color */
+  color: #333333; /* Game text color */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .game-card img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 10px;
+  width: 100%;
+  height: 150px;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .game-card h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
 }
 
 .game-card .buy-now {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #FF6A92; /* Button background color */
-    color: #FFFFFF; /* Button text color */
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #FF6A92; /* Button background color */
+  color: #FFFFFF; /* Button text color */
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .game-card .buy-now:hover {
-    background-color: #FF3E6E; /* Button background color on hover */
+  background-color: #FF3E6E; /* Button background color on hover */
 }
-
-
 
 /*FOOTER */
 /* Custom CSS styles for Footer Section */
 .social-footer {
-    padding: 1rem;
-    background: #FF6A92;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .footerlogo {
-    margin-left: 20px;
-    display: flex;
-    align-items: left;
-    position: absolute;
-  }
-  
-  .site-footer {
-    text-align: center;
-    margin: 10px 0;
-    padding: 10px 0;
-  }
-  
-  /* Social Media Icons */
-  .social-wrapper {
-    text-align: right;
-    margin-right: 60px;
-  }
-  
-  .social-wrapper ul li {
-    display: inline;
-    margin: 0 5px;
-  }
-  
-  .twitter-icon,
-  .facebook-icon,
-  .instagram-icon,
-  .discord-icon,
-  .twitch-icon,
-  .youtube-icon {
-    margin-top: 0.625em;
-    width: 50px;
-    height: 50px;
-    opacity: 0.6;
-    filter: alpha(opacity=60);
-    border-radius: 25px;
-  }
-  
-  .twitter-icon:hover,
-  .facebook-icon:hover,
-  .instagram-icon:hover,
-  .discord-icon:hover,
-  .twitch-icon:hover,
-  .youtube-icon:hover {
-    opacity: 1.0;
-    filter: alpha(opacity=100);
-  }
-  
-  .site-footer {
-    background-color: #0E0F1A;
-  }
-  
-  .footercontents ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    color: #BCB8B8;
-  }
-  
-  .footercontents ul li {
-    list-style-type: none;
-    line-height: 90px;
-  }
-  
-  .footer-item > a:link {
-    padding: 10px;
-    font-size: 17px;
-    text-decoration: none;
-  }
-  
-  .footer-nav {
-    color: #BCB8B8;
-  }
+  padding: 1rem;
+  background: #FF6A92;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.footerlogo {
+  margin-left: 20px;
+  display: flex;
+  align-items: left;
+  position: absolute;
+}
+
+.site-footer {
+  text-align: center;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+/* Social Media Icons */
+.social-wrapper {
+  text-align: right;
+  margin-right: 60px;
+}
+
+.social-wrapper ul li {
+  display: inline;
+  margin: 0 5px;
+}
+
+.twitter-icon,
+.facebook-icon,
+.instagram-icon,
+.discord-icon,
+.twitch-icon,
+.youtube-icon {
+  margin-top: 0.625em;
+  width: 50px;
+  height: 50px;
+  opacity: 0.6;
+  filter: alpha(opacity=60);
+  border-radius: 25px;
+}
+
+.twitter-icon:hover,
+.facebook-icon:hover,
+.instagram-icon:hover,
+.discord-icon:hover,
+.twitch-icon:hover,
+.youtube-icon:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+}
+
+.site-footer {
+  background-color: #0E0F1A;
+}
+
+.footercontents ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  color: #BCB8B8;
+}
+
+.footercontents ul li {
+  list-style-type: none;
+  line-height: 90px;
+}
+
+.footer-item > a:link {
+  padding: 10px;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+.footer-nav {
+  color: #BCB8B8;
+}
+

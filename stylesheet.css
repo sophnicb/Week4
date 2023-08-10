@@ -79,6 +79,14 @@ button.navbar-toggler {
   margin-top: 14px; /*center to nav bar*/
   border: none; /*remove border*/
 }
+
+/*Search Button Styles*/
+.btn-outline-success {
+  background-color: #FF6A92;
+  color:#0E0F1A;
+  border: #0BC9CD;
+}
+
 .popup { /*styles for pop up that appears after pressing account*/
   background-color: #0BC9CD; 
   position: fixed; /*so that it centers to page not navbar parent*/
@@ -322,6 +330,7 @@ body {
   margin-left: -80px;
   height: 250px; /* Adjust here the card size */
   width: 500px;
+  text-align: center;
 }
 
 /*BIG NEWS ANNOUNCEMENT SECTION */
@@ -426,7 +435,7 @@ body {
 .big-news-section .sale-info .card-headline {
   text-align: center;
   color: #333;
-  font-size: 18px;
+  font-size: 40px;
   font-weight: bold; 
   margin-top: 40px; /* Adding some spacing between the discount percentage and the product name */
   position: absolute;
